@@ -1,0 +1,27 @@
+<!-- profile.component.html -->
+<div>
+  <h2>Welcome, {{ username }}!</h2>
+</div>
+<div class="header-container">
+  <!-- Other header content -->
+  <div id="mapContainer"></div>
+  <div class="search-widget"></div>
+  <div id="legendDiv" class="legend-container"></div>
+  <button class="btn" (click)="logout()">log out</button>
+</div>
+<div #mapViewNode></div>
+
+<div class="sidebar">
+  <ul>
+    <label><strong>FEATURE LAYERS</strong></label><br><br>
+    <li>
+      <input type="checkbox" [(ngModel)]="layerVisibility" (change)="updateLayerVisibility()" />
+      <label>USA Feature</label>
+    </li>
+    <li>
+      <input type="checkbox" [(ngModel)]="secondLayerVisibility" (change)="updateSecondLayerVisibility()" />
+      <label>Earth Quake</label>
+    </li>
+    <!-- Rest of the sidebar content -->
+  </ul>
+</div>
